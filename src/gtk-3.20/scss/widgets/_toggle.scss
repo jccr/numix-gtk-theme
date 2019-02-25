@@ -118,7 +118,7 @@ $suffix: if($variant == "dark", "-dark", "");
         slider {
             min-height: 18px;
     	    min-width: 26px;
-	    padding: 0 2px;
+	        padding: 0 2px;
 
             background-color: $switch_slider_bg_color;
             transition: all 0.3s ease-in;
@@ -133,7 +133,7 @@ $suffix: if($variant == "dark", "-dark", "");
             color: $base_color;
 
             slider {
-                background-color: $white;
+                background-color: $switch_slider_fg_color;
                 box-shadow: 0 1px 3px 0 alpha($dark_shadow, .1);
             }
         }

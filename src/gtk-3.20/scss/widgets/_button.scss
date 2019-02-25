@@ -57,7 +57,7 @@
         border-color: transparent;
         background-color: transparent;
         background-image: none;
-        box-shadow: none;
+        // box-shadow: none;
     }
 
     %linked_middle {
@@ -181,44 +181,52 @@
 
     @extend %linked_button;
 
-    box-shadow: inset -1px 0 border_normal(rgba(0, 0, 0, .12 + $border_strength)),
-    0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
+    // box-shadow: inset -1px 0 border_normal(rgba(0, 0, 0, .12 + $border_strength)),
+    // 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
 
     &:focus, &:hover {
-        box-shadow: inset -1px 0 border_focus(rgba(0, 0, 0, .12 + $border_strength)),
-        0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
+        // box-shadow: inset -1px 0 border_focus(rgba(0, 0, 0, .12 + $border_strength)),
+        // 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
     }
 
     &:active, &:active:hover,
     &:active:focus, &:active:hover:focus,
     &:checked, &:checked:hover,
     &:checked:focus, &:checked:hover:focus {
-        box-shadow: inset -1px 0 border_active(rgba(0, 0, 0, .12 + $border_strength)),
-        inset 0 1px alpha($dark_shadow, .07),
-        inset 0 -1px alpha($dark_shadow, .05);
+        // box-shadow: inset -1px 0 border_active(rgba(0, 0, 0, .12 + $border_strength)),
+        // inset 0 1px alpha($dark_shadow, .07),
+        // inset 0 -1px alpha($dark_shadow, .05);
     }
 
-    &:disabled { box-shadow: inset -1px 0 shade($bg, .8); }
+    &:disabled {
+        // box-shadow: inset -1px 0 shade($bg, .8);
+    }
 
-    &:last-child, &:only-child { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength); }
+    &:last-child, &:only-child {
+        // box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
+    }
 
-    &:last-child:hover, &:only-child:hover { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength); }
+    &:last-child:hover, &:only-child:hover {
+        //  box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
+    }
 
     &:disabled:last-child, &:disabled:only-child,
     &:active:disabled:last-child, &:active:disabled:only-child,
-    &:checked:disabled:last-child, &:checked:disabled:only-child { box-shadow: none; }
+    &:checked:disabled:last-child, &:checked:disabled:only-child {
+        //  box-shadow: none;
+    }
 
     &:active:last-child, &:active:last-child:focus, &:active:last-child:hover, &:active:last-child:hover:focus,
     &:checked:last-child, &:checked:last-child:focus, &:checked:last-child:hover, &:checked:last-child:hover:focus {
-        box-shadow: inset 0 1px alpha($dark_shadow, .07),
-        inset -1px 0 alpha($dark_shadow, .06);
+        // box-shadow: inset 0 1px alpha($dark_shadow, .07),
+        // inset -1px 0 alpha($dark_shadow, .06);
     }
 
     &:active:only-child, &:active:only-child:focus, &:active:only-child:hover, &:active:only-child:hover:focus,
     &:checked:only-child, &:checked:only-child:focus, &:checked:only-child:hover, &:checked:only-child:hover:focus {
-        box-shadow: inset 1px 0 alpha($dark_shadow, .06),
-        inset 0 1px alpha($dark_shadow, .07),
-        inset -1px 0 alpha($dark_shadow, .06);
+        // box-shadow: inset 1px 0 alpha($dark_shadow, .06),
+        // inset 0 1px alpha($dark_shadow, .07),
+        // inset -1px 0 alpha($dark_shadow, .06);
     }
 }
 
@@ -228,44 +236,52 @@
 
     @extend %linked_vertical_button;
 
-    box-shadow: inset 0 -1px border_normal(rgba(0, 0, 0, .12 + $border_strength)),
-    0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
+    // box-shadow: inset 0 -1px border_normal(rgba(0, 0, 0, .12 + $border_strength)),
+    // 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
 
     &:focus, &:hover {
-        box-shadow: inset 0 -1px border_focus(rgba(0, 0, 0, .12 + $border_strength)),
-        0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
+        // box-shadow: inset 0 -1px border_focus(rgba(0, 0, 0, .12 + $border_strength)),
+        // 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
     }
 
     &:active, &:active:hover,
     &:active:focus, &:active:hover:focus,
     &:checked, &:checked:hover,
     &:checked:focus, &:checked:hover:focus {
-        box-shadow: inset 0 -1px border_active(rgba(0, 0, 0, .12 + $border_strength)),
-        inset 1px 0 alpha($dark_shadow, .07),
-        inset -1px 0 alpha($dark_shadow, .05);
+        // box-shadow: inset 0 -1px border_active(rgba(0, 0, 0, .12 + $border_strength)),
+        // inset 1px 0 alpha($dark_shadow, .07),
+        // inset -1px 0 alpha($dark_shadow, .05);
     }
 
-    &:disabled { box-shadow: inset 0 -1px shade($bg, .8); }
+    &:disabled {
+        // box-shadow: inset 0 -1px shade($bg, .8);
+    }
 
-    &:last-child, &:only-child { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength); }
+    &:last-child, &:only-child {
+        // box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
+    }
 
-    &:last-child:hover, &:only-child:hover { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength); }
+    &:last-child:hover, &:only-child:hover {
+        // box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
+    }
 
     &:disabled:last-child, &:disabled:only-child,
     &:active:disabled:last-child, &:active:disabled:only-child,
-    &:checked:disabled:last-child, &:checked:disabled:only-child { box-shadow: none; }
+    &:checked:disabled:last-child, &:checked:disabled:only-child {
+        // box-shadow: none;
+    }
 
     &:active:last-child, &:active:last-child:focus, &:active:last-child:hover, &:active:last-child:hover:focus,
     &:checked:last-child, &:checked:last-child:focus, &:checked:last-child:hover, &:checked:last-child:hover:focus {
-        box-shadow: inset 0 1px alpha($dark_shadow, .07),
-        inset -1px 0 alpha($dark_shadow, .06);
+        // box-shadow: inset 0 1px alpha($dark_shadow, .07),
+        // inset -1px 0 alpha($dark_shadow, .06);
     }
 
     &:active:only-child, &:active:only-child:focus, &:active:only-child:hover, &:active:only-child:hover:focus,
     &:checked:only-child, &:checked:only-child:focus, &:checked:only-child:hover, &:checked:only-child:hover:focus {
-        box-shadow: inset 1px 0 alpha($dark_shadow, .06),
-        inset 0 1px alpha($dark_shadow, .07),
-        inset -1px 0 alpha($dark_shadow, .06);
+        // box-shadow: inset 1px 0 alpha($dark_shadow, .06),
+        // inset 0 1px alpha($dark_shadow, .07),
+        // inset -1px 0 alpha($dark_shadow, .06);
     }
 }
 
@@ -281,9 +297,9 @@
         @include linear-gradient(shade($button_bg, 1.08));
     } @else {
         @include linear-gradient($button_bg);
-        @include border(rgba(0, 0, 0, .12 + $border_strength));  
+        @include border(rgba(0, 0, 0, .12 + $border_strength));
     }
-    
+
     color: $fg;
 
 
@@ -291,7 +307,7 @@
         border-color: alpha($button_bg, 0);
         background-color: alpha($button_bg, 0);
         background-image: none;
-        box-shadow: none;
+        // box-shadow: none;
     }
 
     &, &.flat {
@@ -304,9 +320,9 @@
                 @include border(rgba(0, 0, 0, .2 + $border_strength));
             }
 
-            
+
         }
-            
+
 
         &:checked, &:active {
             @if (lightness($button_bg) > 50) {
@@ -332,7 +348,7 @@
             @include linear-gradient(shade($button_bg, .9));
 
             color: $fg;
-            box-shadow: none;
+            // box-shadow: none;
         }
 
         &:disabled:disabled {
@@ -343,7 +359,7 @@
             }
 
             color: mix($bg, $fg, .5);
-            box-shadow: none;
+            // box-shadow: none;
         }
     }
 
@@ -357,7 +373,7 @@
             background-color: transparent;
             background-image: none;
             color: mix($bg, $fg, .5);
-            box-shadow: none;
+            // box-shadow: none;
         }
     }
 
@@ -374,20 +390,20 @@
         border: 1px solid transparent;
         background-color: transparent;
         background-image: none;
-        box-shadow: none;
+        // box-shadow: none;
 
         &:focus, &:hover {
             border: 1px solid alpha($bg_color, .1);
             background-color: alpha($white, .2);
             background-image: none;
-            box-shadow: none;
+            // box-shadow: none;
         }
 
         &:active, &:checked, &:active:hover, &:checked:hover {
             border: 1px solid alpha($selected_bg_color, .2);
             background-color: alpha($white, .2);
             background-image: none;
-            box-shadow: none;
+            // box-shadow: none;
         }
     }
 
@@ -429,7 +445,7 @@
                 border: 1px solid border_normal($bg_color);
                 background-color: transparent;
                 background-image: none;
-                box-shadow: inset 1px 0 shade($base_color, .9);
+                // box-shadow: inset 1px 0 shade($base_color, .9);
             } @else {
                 @extend %entry;
                 @include linear-gradient($base_color, to top);
@@ -452,7 +468,7 @@
                 // reset all the other props since the spinbutton node is styled here
                 border: 0;
                 border-radius: 0;
-                box-shadow: none;
+                // box-shadow: none;
             }
 
             button {
@@ -460,21 +476,23 @@
                 border-color: alpha($borders_color, .8);
                 border-style: none none none solid;
                 background-image: none;
-                box-shadow: none;
+                // box-shadow: none;
 
                 @if (lightness($bg_color) > 50) {
                     background-color: shade($bg_color, 1.08);
                 }
 
-                &:hover { 
+                &:hover {
                     @if (lightness($bg_color) > 50) {
                         background-color: shade($bg_color, 1.11);
-                    } 
+                    }
                 }
 
                 &:dir(rtl) { border-style: none solid none none; }
 
-                &:active { box-shadow: inset 0 2px 3px -1px transparentize($black, .8); }
+                &:active {
+                    // box-shadow: inset 0 2px 3px -1px transparentize($black, .8);
+                }
 
                 &:backdrop { border-color: alpha($backdrop_borders_color, .8); }
 

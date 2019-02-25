@@ -8,23 +8,24 @@
 @include exports("notebook") {
     notebook {
         &.frame {
-            border-color: border_normal($base_color);
+            border: none;
+            // border-color: border_normal($base_color);
 
-            &.top {
-                border-width: 1px 1px 0;
-            }
+            // &.top {
+            //     border-width: 1px 1px 0;
+            // }
 
-            &.right {
-                border-width: 1px 1px 1px 0;
-            }
+            // &.right {
+            //     border-width: 1px 1px 1px 0;
+            // }
 
-            &.bottom {
-                border-width: 0 1px 1px;
-            }
+            // &.bottom {
+            //     border-width: 0 1px 1px;
+            // }
 
-            &.left {
-                border-width: 1px 0 1px 1px;
-            }
+            // &.left {
+            //     border-width: 1px 0 1px 1px;
+            // }
         }
 
         > header {
@@ -35,13 +36,13 @@
             border-color: $borders_color;
             background-image: none;
             background-clip: border-box;
-            background-color: shade($base_color, .9);
+            background-color: shade($bg_color, 0.5);
             color: $text_color;
 
             tabs { margin: -1px; }
 
             &.top {
-                border-bottom-style: solid;
+                // border-bottom-style: solid;
 
                 tabs {
                     margin-top: 0;
@@ -51,7 +52,7 @@
             }
 
             &.right {
-                border-left-style: solid;
+                // border-left-style: solid;
 
                 tabs {
                     margin-right: 0;
@@ -61,7 +62,7 @@
             }
 
             &.bottom {
-                border-top-style: solid;
+                // border-top-style: solid;
 
                 tabs {
                     margin-bottom: 0;
@@ -71,7 +72,7 @@
             }
 
             &.left {
-                border-right-style: solid;
+                // border-right-style: solid;
 
                 tabs {
                     margin-left: 0;
@@ -183,18 +184,18 @@
                 }
 
                 &:checked {
-                    @if (lightness($bg_color) > 50) {
-                        background-color: mix($bg_color, $base_color, .7);
-                    } @else {
-                        background-color: mix($bg_color, $base_color, .4);
-                    }
+                    // @if (lightness($bg_color) > 50) {
+                    //     background-color: mix($bg_color, $base_color, .7);
+                    // } @else {
+                    //     background-color: mix($bg_color, $base_color, .4);
+                    // }
 
                     border-bottom-color: transparent;
                     outline: none;
 
-                    label {
-                        color: $selected_bg_color;
-                    }
+                    // label {
+                    //     color: $selected_bg_color;
+                    // }
 
                     &:hover {
                         @if (lightness($bg_color) > 50) {
@@ -206,28 +207,28 @@
                 }
 
                 label {
-                    color: mix($text_color, $base_color, .3);
+                    color: $text_color;
                 }
             }
 
 
             &.top tab {
-                box-shadow: inset 0 -1px $borders_color; 
-                transition: box-shadow .2s ease-out;
+                // box-shadow: inset 0 -1px $borders_color;
+                // transition: box-shadow .2s ease-out;
 
                 &:hover {
-                    outline: none; 
-                    &:not(:first-child):not(:last-child):not(:only-child) {
-                        box-shadow: 1px 0 1px shade($base_color, .85), -1px 0 1px shade($base_color, .85), inset 0 -1px $borders_color;
-                    }
+                    outline: none;
+                    // &:not(:first-child):not(:last-child):not(:only-child) {
+                    //     box-shadow: 1px 0 1px shade($base_color, .85), -1px 0 1px shade($base_color, .85), inset 0 -1px $borders_color;
+                    // }
 
-                    &:last-child:not(:only-child) {
-                        box-shadow: -1px 0 1px shade($base_color, .85), inset 0 -1px $borders_color;
-                    }
+                    // &:last-child:not(:only-child) {
+                    //     box-shadow: -1px 0 1px shade($base_color, .85), inset 0 -1px $borders_color;
+                    // }
 
-                    &:first-child:not(:only-child) {
-                        box-shadow: 1px 0 1px shade($base_color, .85), inset 0 -1px $borders_color;
-                    }       
+                    // &:first-child:not(:only-child) {
+                    //     box-shadow: 1px 0 1px shade($base_color, .85), inset 0 -1px $borders_color;
+                    // }
                 }
 
                 &:checked {
@@ -235,7 +236,7 @@
 
                     label {
                         margin-bottom: 0;
-                        color: $selected_bg_color;
+                        // color: $selected_bg_color;
                     }
 
                     &:hover {
@@ -243,39 +244,39 @@
                     }
 
                     &:not(:first-child):not(:last-child):not(:only-child) {
-                        box-shadow: 1px 0 1px shade($base_color, .8), -1px 0 1px shade($base_color, .8), inset 0 -2px $selected_bg_color;
+                        box-shadow: inset 0 -2px $selected_bg_color;
                     }
 
                     &:last-child:not(:only-child) {
-                        box-shadow: -1px 0 1px shade($base_color, .8), inset 0 -2px $selected_bg_color;
+                        box-shadow: inset 0 -2px $selected_bg_color;
 
                     }
 
                     &:first-child:not(:only-child) {
-                        box-shadow: 1px 0 1px shade($base_color, .8), inset 0 -2px $selected_bg_color;
+                        box-shadow: inset 0 -2px $selected_bg_color;
 
                     }
                 }
             }
 
             &.right tab {
-                box-shadow: inset 1px 0 $borders_color;
-                transition: box-shadow .3s ease-out;
+                // box-shadow: inset 1px 0 $borders_color;
+                // transition: box-shadow .3s ease-out;
 
                 &:hover {
                     outline: none;
 
-                    &:not(:first-child):not(:last-child):not(:only-child) {
-                        box-shadow: 0 1px 1px shade($base_color, .85), 0 -1px 1px shade($base_color, .85), inset 1px 0 $borders_color;
-                    }
+                    // &:not(:first-child):not(:last-child):not(:only-child) {
+                    //     box-shadow: 0 1px 1px shade($base_color, .85), 0 -1px 1px shade($base_color, .85), inset 1px 0 $borders_color;
+                    // }
 
-                    &:last-child:not(:only-child) {
-                        box-shadow: 0 -1px 1px shade($base_color, .85), inset 1px 0 $borders_color;
-                    }
+                    // &:last-child:not(:only-child) {
+                    //     box-shadow: 0 -1px 1px shade($base_color, .85), inset 1px 0 $borders_color;
+                    // }
 
-                    &:first-child:not(:only-child) {
-                        box-shadow: 0 1px 1px shade($base_color, .85), inset 1px 0 $borders_color;
-                    }
+                    // &:first-child:not(:only-child) {
+                    //     box-shadow: 0 1px 1px shade($base_color, .85), inset 1px 0 $borders_color;
+                    // }
                 }
 
                 &:checked {
@@ -283,7 +284,7 @@
 
                     label {
                         margin-left: 0;
-                        color: $selected_bg_color;
+                        // color: $selected_bg_color;
                     }
 
                     &:hover {
@@ -291,36 +292,36 @@
                     }
 
                     &:not(:first-child):not(:last-child):not(:only-child) {
-                        box-shadow: 0 1px 1px shade($base_color, .8), 0 -1px 1px shade($base_color, .8), inset 2px 0 $selected_bg_color;
+                        box-shadow: inset 2px 0 $selected_bg_color;
                     }
 
                     &:last-child:not(:only-child) {
-                        box-shadow: 0 -1px 1px shade($base_color, .8), inset 2px 0 $selected_bg_color;
+                        box-shadow: inset 2px 0 $selected_bg_color;
                     }
 
                     &:first-child:not(:only-child) {
-                        box-shadow: 0 1px 1px shade($base_color, .8), inset 2px 0 $selected_bg_color;
+                        box-shadow: inset 2px 0 $selected_bg_color;
                     }
                 }
             }
 
             &.bottom tab {
-                box-shadow: inset 0 1px $borders_color;
-                transition: box-shadow .3s ease-out;
+                // box-shadow: inset 0 1px $borders_color;
+                // transition: box-shadow .3s ease-out;
 
                 &:hover {
                     outline: none;
-                    &:not(:first-child):not(:last-child):not(:only-child) {
-                        box-shadow: 1px 0 1px shade($base_color, .85), -1px 0 1px shade($base_color, .85), inset 0 1px $borders_color;
-                    }
+                    // &:not(:first-child):not(:last-child):not(:only-child) {
+                    //     box-shadow: 1px 0 1px shade($base_color, .85), -1px 0 1px shade($base_color, .85), inset 0 1px $borders_color;
+                    // }
 
-                    &:last-child:not(:only-child) {
-                        box-shadow: -1px 0 1px shade($base_color, .85), inset 0 1px $borders_color;
-                    }
+                    // &:last-child:not(:only-child) {
+                    //     box-shadow: -1px 0 1px shade($base_color, .85), inset 0 1px $borders_color;
+                    // }
 
-                    &:first-child:not(:only-child) {
-                        box-shadow: 1px 0 1px shade($base_color, .85), inset 0 1px $borders_color;
-                    }
+                    // &:first-child:not(:only-child) {
+                    //     box-shadow: 1px 0 1px shade($base_color, .85), inset 0 1px $borders_color;
+                    // }
                 }
 
                 &:checked {
@@ -328,7 +329,7 @@
 
                     label {
                         margin-top: 0;
-                        color: $selected_bg_color;
+                        // color: $selected_bg_color;
                     }
 
                     &:hover {
@@ -336,37 +337,37 @@
                     }
 
                     &:not(:first-child):not(:last-child):not(:only-child) {
-                        box-shadow: 1px 0 1px shade($base_color, .8), -1px 0 1px shade($base_color, .8), inset 0 2px $selected_bg_color;
+                        box-shadow: inset 0 2px $selected_bg_color;
                     }
 
                     &:last-child:not(:only-child) {
-                        box-shadow: -1px 0 1px shade($base_color, .8), inset 0 2px $selected_bg_color;
+                        box-shadow: inset 0 2px $selected_bg_color;
                     }
 
                     &:first-child:not(:only-child) {
-                        box-shadow: 1px 0 1px shade($base_color, .8), inset 0 2px $selected_bg_color;
+                        box-shadow: inset 0 2px $selected_bg_color;
                     }
                 }
             }
 
             &.left tab {
-                box-shadow: inset -1px 0 $borders_color;
-                transition: box-shadow .3s ease-out; 
+                // box-shadow: inset -1px 0 $borders_color;
+                // transition: box-shadow .3s ease-out;
 
                 &:hover {
                     outline: none;
 
-                    &:not(:first-child):not(:last-child):not(:only-child) {
-                        box-shadow: 0 1px 1px shade($base_color, .85), 0 -1px 1px shade($base_color, .85), inset -1px 0 $borders_color;
-                    }
+                    // &:not(:first-child):not(:last-child):not(:only-child) {
+                    //     box-shadow: 0 1px 1px shade($base_color, .85), 0 -1px 1px shade($base_color, .85), inset -1px 0 $borders_color;
+                    // }
 
-                    &:last-child:not(:only-child) {
-                        box-shadow: 0 -1px 1px shade($base_color, .85), inset -1px 0 $borders_color;
-                    }
+                    // &:last-child:not(:only-child) {
+                    //     box-shadow: 0 -1px 1px shade($base_color, .85), inset -1px 0 $borders_color;
+                    // }
 
-                    &:first-child:not(:only-child) {
-                        box-shadow: 0 1px 1px shade($base_color, .85), inset -1px 0 $borders_color;
-                    }
+                    // &:first-child:not(:only-child) {
+                    //     box-shadow: 0 1px 1px shade($base_color, .85), inset -1px 0 $borders_color;
+                    // }
                 }
 
                 &:checked {
@@ -374,7 +375,7 @@
 
                     label {
                         margin-right: 0;
-                        color: $selected_bg_color;
+                        // color: $selected_bg_color;
                     }
 
                     &:hover {
@@ -382,15 +383,15 @@
                     }
 
                     &:not(:first-child):not(:last-child):not(:only-child) {
-                        box-shadow: 0 1px 1px shade($base_color, .8), 0 -1px 1px shade($base_color, .8), inset -2px 0 $selected_bg_color;
+                        box-shadow: inset -2px 0 $selected_bg_color;
                     }
 
                     &:last-child:not(:only-child) {
-                        box-shadow: 0 -1px 1px shade($base_color, .8), inset -2px 0 $selected_bg_color;
+                        box-shadow: inset -2px 0 $selected_bg_color;
                     }
 
                     &:first-child:not(:only-child) {
-                        box-shadow: 0 1px 1px shade($base_color, .8), inset -2px 0 $selected_bg_color;
+                        box-shadow: inset -2px 0 $selected_bg_color;
                     }
                 }
             }
